@@ -101,7 +101,8 @@ class B_tree:
         c = c+1
 
         temp = copy.deepcopy(arr)
-        ind = self.entropy(arr).index(min(self.entropy(arr)))
+        ent = self.entropy(arr)
+        ind = ent.index(min(ent))
         left, right = [], []
         # print("Break at:", val[ind])
         for j in arr:
